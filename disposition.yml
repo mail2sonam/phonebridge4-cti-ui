@@ -1,0 +1,259 @@
+# YAML file represent disposition details
+---
+- id: 1
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Follow Up&&subdispo-PTP&&subssububdispo-PTP Date"
+- id: 2
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Call Back&&subdispo-Will Pay Call Back&&subsubsubdispo-Call Back Date"
+- id: 3
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Dispute&&subdispo-Charges Dispute&&subsubdispo-Date"
+- id: 4
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Others&&subdispo-Third Party"
+- id: 5
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Issue&&subsubdispo-RC Related"
+- id: 6
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Others&&subdispo-Others"
+- id: 7
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Issue&&subdispo-Payment Not Updated"
+- id: 8
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Charges Calling"
+  dispo: "dispo-Call Back&&subdispo-Left Message"
+- id: 9
+  client: "Orange"
+  mainDispo: "Not Connected1" 
+  campaign: "Charges Calling" 
+  dispo: "dispo-Not Connected&&subdispo-Switchd Off" 
+- id: 1
+  client: "Orange"
+  mainDispo: "Not Connected2" 
+  campaign: "Charges Calling" 
+  dispo: "dispo-Not Connected&&subdispo-Ringing No Response"   
+- id: 4
+  client: "Orange"
+  mainDispo: "Not Connected3" 
+  campaign: "Charges Calling" 
+  dispo: "dispo-Not Connected&&subdispo-Invalid Number"    
+- id: 5
+  client: "Orange"
+  mainDispo: "Not Connected4" 
+  campaign: "Charges Calling" 
+  dispo: "dispo-Not Connected&&subdispo-Not Reachable"    
+- id: 6
+  client: "Orange"
+  mainDispo: "Not Connected5" 
+  campaign: "Charges Calling" 
+  dispo: "dispo-Not Connected&&subdispo-Wrong Number"    
+- id: 7
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Interestd"
+- id: 8
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Call Back"
+- id: 9
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Not Interested"
+- id: 10
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Due to Insurance"
+- id: 11
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Due to Charges Issue"
+- id: 12
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Not Reachable"
+- id: 13
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Switched Off"
+- id: 14
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Ringing No Response"
+- id: 15
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Incoming Barred"
+- id: 16
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Wrong Number"
+- id: 17
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Line Busy"
+- id: 17
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "OSCL" 
+  dispo: "dispo-Invalid Number"
+- id: 18
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Call Completed"
+- id: 19
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Discrepancy"
+- id: 20
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Customer Not Responding"
+- id: 21
+  client: "Orange"
+  mainDispo: "Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-3rd Party Case"
+- id: 22
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Not Reachable"
+- id: 23
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Switched Off"
+- id: 24
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Ringing No Response"
+- id: 25
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Incoming Barred"
+- id: 26
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Wrong Number"
+- id: 27
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Line Busy"
+- id: 27
+  client: "Orange"
+  mainDispo: "Not Connected" 
+  campaign: "Welcome Calling" 
+  dispo: "dispo-Invalid Number"
+- id: 28
+  client: "Orange"
+  mainDispo: "Test Dispo"
+  campaign: "Test dialer"
+  dispo: "dispo-Test Not Connected&&subdispo-Test Switchd Off&&subsubdispo-Test alwaysoff"
+- id: 29
+  client: "Orange"
+  mainDispo: "Test Dispo"
+  campaign: "Test dialer"
+  dispo: "dispo-Test Connected&&subdispo-Test Switchd On&&subsubdispo-Test alwayson"
+- id: 30
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Eupraxia Welcome"
+  dispo: "Interested,dispo-Callback"
+- id: 32
+  client: "Orange"
+  mainDispo: "Connected Outgoing"
+  campaign: "OGDefault"
+  dispo: "Interested,dispo-Callback"
+- id: 34
+  client: "Orange"
+  mainDispo: "NotConnected Outgoing"
+  campaign: "OGDefault"
+  dispo: "Switched OFF"
+- id: 35
+  client: "Orange"
+  mainDispo: "NotConnected Outgoing"
+  campaign: "OGDefault"
+  dispo: "Not reachable"
+- id: 36
+  client: "Orange"
+  mainDispo: "NotConnected Outgoing"
+  campaign: "OGDefault"
+  dispo: "RNR"
+- id: 37
+  client: "Orange"
+  mainDispo: "NotConnected Outgoing"
+  campaign: "OGDefault"
+  dispo: "Incoming Barred"
+- id: 38
+  client: "Orange"
+  mainDispo: "NotConnected Outgoing"
+  campaign: "OGDefault"
+  dispo: "Wrong Number"
+- id: 39
+  client: "Orange"
+  mainDispo: "NotConnected Outgoing"
+  campaign: "OGDefault"
+  dispo: "Line Busy"
+- id: 40
+  client: "Orange"
+  mainDispo: "NotConnected Outgoing"
+  campaign: "OGDefault"
+  dispo: "Invalid Number"
+- id: 41
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "OGDefault"
+  dispo: "dispo-Follow Up&&subdispo-PTP&&subsubdispo-PTP Date"
+- id: 42
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "OGDefault"
+  dispo: "dispo-Call Back&&subdispo-Will Pay Call Back&&subsubdispo-Call Back Date"
+- id: 43
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "OGDefault"
+  dispo: "dispo-Dispute&&subdispo-Charges"
+- id: 44
+  client: "Orange"
+  mainDispo: "Connected"
+  campaign: "Maruthu_dialer"
+  dispo: "dispo-Dispute&&subdispo-Charges"
+
+
