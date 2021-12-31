@@ -8,6 +8,7 @@ var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
 
+
 //const DIALER_API_BASE_URL = "http://192.168.10.210:9091";
 
 const DIALER_API_BASE_URL = ipName
@@ -59,8 +60,6 @@ class DialerApi {
     removefrmQueue(remove) {
         return Axios.post(ipName + '/' + 'api/removeQueue', remove);
     }
-    stopDialer(stop) {
-        return Axios.post(ipName + '/' + 'file/stopDialler', stop);
-    }
+
 };
 export default new DialerApi()

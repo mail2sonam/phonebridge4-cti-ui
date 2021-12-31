@@ -10,6 +10,7 @@ var ipHost = host.substring(0, charHost)
 var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
+
 const USER_API_BASE_URL = ipName;
 
 Axios.interceptors.response.use(
@@ -45,15 +46,15 @@ class UserApi {
     }
 
     logout(out) {
-        return Axios.post(ipName + '/' + 'user/logout', out);
+        return Axios.post(ipName + '/' + 'user/logout', out, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
     }
 
     addUser(add) {
-        return Axios.post(ipName + '/' + 'user/Save', add);
+        return Axios.post(ipName + '/' + 'user/Save', add, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
     }
 
     userList() {
-        return Axios.get(ipName + '/' + 'user/showAll');
+        return Axios.get(ipName + '/' + 'user/showAll', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
     }
 
 

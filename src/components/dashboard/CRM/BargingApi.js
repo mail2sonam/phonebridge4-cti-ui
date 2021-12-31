@@ -6,6 +6,7 @@ var ipHost = host.substring(0, charHost)
 //var ipName = window.document.location.protocol+"//"+ ipHost +":9091";
 var ipName = "http://192.168.10.210:5001/eupraxia"
 
+
 const MONITOR_API_BASE_URL = ipName
 //const MONITOR7000_API_BASE_URL = "http://192.168.10.210:9091";
 

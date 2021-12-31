@@ -6,6 +6,7 @@ var ipHost = host.substring(0, charHost)
 //var ipName = window.document.location.protocol+"//"+ ipHost +":9091";
 var ipName = "http://192.168.10.210:5001/eupraxia"
 
+
 //const CALLHISTORY_API_BASE_URL = "http://192.168.10.210:9091";
 
 const CALLHISTORY_API_BASE_URL = ipName
@@ -52,7 +53,7 @@ class CallDetailApi {
     // }
 
     // EditName(name) {
-     //   return Axios.post(ipName + '/' + 'call/saveName', name, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+    //     return Axios.post(ipName + '/' + 'call/saveName', name, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
     // }
 
     MissedCall(miss) {

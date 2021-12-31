@@ -45,7 +45,7 @@ const DispositionCard = (props) => {
       callbackDate: startDate.toISOString().substr(0, 19),
 
     }
-console.log(data);
+
     DispositionApi.saveDispo(data)
       .subscribe(response => {
         setSave({
@@ -59,15 +59,15 @@ console.log(data);
   }
   // save Disposition
 
- // DispositionApi.Dispo()
- // .subscribe(res => {
- //     const dis = res;
- //    let tempList = [];
- //     dis.data.disposition.forEach(element => {
- //       tempList.push(element.disposition);
- //     });
- //     setDispoList(tempList);
- //   })
+  DispositionApi.Dispo()
+    .subscribe(res => {
+      const dis = res;
+      let tempList = [];
+      dis.data.disposition.forEach(element => {
+        tempList.push(element.disposition);
+      });
+      setDispoList(tempList);
+    })
 
   function onChangeDisposition(value) {
     saveon.disposition = value

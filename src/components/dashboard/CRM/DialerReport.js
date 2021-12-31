@@ -6,7 +6,7 @@ import Auxiliary from "util/Auxiliary";
 import { Link, useHistory } from "react-router-dom";
 import AdminHeader from "../../../containers/Topbar/InsideHeader/AdminHeader";
 import { ExportToCsv } from 'export-to-csv';
-import AudioPlayer from 'react-h5-audio-player';
+// import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
@@ -116,10 +116,10 @@ const DialerReport = (props) => {
                         phoneNo: res.data.reports[i].phoneNo,
                         cusName: res.data.reports[i].cusName,
                         extension: res.data.reports[i].extension,
-                        dispo: res.data.reports[i].disposition,
-                        //maindispo: res.data.reports[i].maindispo,
-                        //subdispo: res.data.reports[i].subdispo,
-                        //subsubdispo: res.data.reports[i].subsubdispo,
+                        dispo: res.data.reports[i].dispo,
+                        maindispo: res.data.reports[i].maindispo,
+                        subdispo: res.data.reports[i].subdispo,
+                        subsubdispo: res.data.reports[i].subsubdispo,
                         comments: res.data.reports[i].comments,
                         callStatus: res.data.reports[i].callStatus,
                         callStartTime: res.data.reports[i].callStartTime,
@@ -160,28 +160,44 @@ const DialerReport = (props) => {
             width: 100,
             fixed: 'left',
         },
-         {
-            title: 'Phone Number',
-            dataIndex: 'phoneNo',
-            key: 'name',
-            width: 150,
-        },
-        {
-            title: 'Customer Name',
-            dataIndex: 'cusName',
-            key: 'name',
-            width: 150,
-        },
         {
             title: 'Extension',
             dataIndex: 'extension',
             key: 'name',
             width: 100,
 
+        }, {
+            title: 'Phone Number',
+            dataIndex: 'phoneNo',
+            key: 'name',
+            width: 150,
+        }, {
+            title: 'Customer Name',
+            dataIndex: 'cusName',
+            key: 'name',
+            width: 150,
         },
         {
             title: 'Disposition',
             dataIndex: 'dispo',
+            key: 'name',
+            width: 150,
+        },
+        {
+            title: 'Main Disposition',
+            dataIndex: 'maindispo',
+            key: 'name',
+            width: 150,
+        },
+        {
+            title: 'Sub Disposition',
+            dataIndex: 'subdispo',
+            key: 'name',
+            width: 150,
+        },
+        {
+            title: 'Sub Sub Disposition',
+            dataIndex: 'subsubdispo',
             key: 'name',
             width: 150,
         },
@@ -191,41 +207,28 @@ const DialerReport = (props) => {
             key: 'name',
             width: 150,
         }, {
+            title: 'Campaign Name',
+            dataIndex: 'camName',
+            key: 'name',
+            width: 150,
+        }, {
             title: 'Call Status',
             dataIndex: 'callStatus',
             key: 'name',
             width: 150,
         }, {
-            title: 'Call Start Time',
+            title: 'Call Start Date',
             dataIndex: 'callStartTime',
             key: 'name',
             width: 100,
 
         }, {
-            title: 'Call End Time',
+            title: 'Call End Date',
             dataIndex: 'callEndTime',
             key: 'name',
             width: 100,
 
-        },  {
-            title: 'Call Drop',
-            dataIndex: 'calldrop',
-            key: 'name',
-            width: 100,
-
-        },{
-            title: 'Second Number',
-            dataIndex: 'secondNumber',
-            key: 'name',
-            width: 100,
-
-        },  {
-            title: 'Campaign Name',
-            dataIndex: 'camName',
-            key: 'name',
-            width: 150,
-        },
-        {
+        }, {
             title: 'Call Direction',
             dataIndex: 'direction',
             key: 'name',
@@ -240,6 +243,18 @@ const DialerReport = (props) => {
         }, {
             title: 'Duration',
             dataIndex: 'duration',
+            key: 'name',
+            width: 100,
+
+        }, {
+            title: 'Call Drop',
+            dataIndex: 'calldrop',
+            key: 'name',
+            width: 100,
+
+        }, {
+            title: 'Second Number',
+            dataIndex: 'secondNumber',
             key: 'name',
             width: 100,
 
@@ -267,7 +282,7 @@ const DialerReport = (props) => {
             title: "Recording Path",
             dataIndex: 'recPath',
             // dataIndex: 'https://www.computerhope.com/jargon/m/example.mp3',
-             key: 'name',
+            // key: 'name',
             fixed: 'right',
             width: 300,
 
@@ -376,7 +391,8 @@ const DialerReport = (props) => {
         // useTextFile: true,
         // useBom: true,
         // useKeysAsHeaders: true,
-        headers: ['Sl.No', 'Agent Name', 'Phone Number', 'Customer Name', 'Extension', 'Disposition',  'Remarks', 'Call Status', 'Call Start Time', 'Call End Time', 'Call Drop',
+        headers: ['Sl.No', 'Agent Name', 'Phone Number', 'Customer Name', 'Extension', 'Disposition', 'Main Disposition',
+            'Sub Disposition', 'Sub Sub Disposition', 'Remarks', 'Call Status', 'Call Start Date', 'Call End Date', 'Call Drop',
             'Second Number', 'Campaign Name', 'Call Direction', 'Conference/Transfer', 'Duration', 'Call Connect Time', 'Hold Start Time', 'Hold End Time', 'Recording Path'] //<-- Won't work with useKeysAsHeaders present!
 
     };

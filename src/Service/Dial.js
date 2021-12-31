@@ -4,7 +4,8 @@ var host = window.document.location.host
 var charHost = host.indexOf(":");
 var ipHost = host.substring(0, charHost)
 //var ipName = window.document.location.protocol+"//"+ ipHost +":9091";
-var ipName = "var ipName" = "http://192.168.10.210:5001/eupraxia"
+var ipName = "http://192.168.10.210:5001/eupraxia"
+
 
 
 

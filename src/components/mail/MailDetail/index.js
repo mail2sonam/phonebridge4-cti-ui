@@ -86,10 +86,10 @@ class MailDetail extends React.Component {
     var dataval = this;
     axios({
       method: 'post',
-      url: '""http://192.168.10.210:5001/eupraxia"/mail/getAttachedFile',
+      url: '"http://192.168.10.210:5001/eupraxia"/mail/getAttachedFile',
       data: { id: localStorage.getItem("mailId") },
       headers: {
-        Authorization: "Bearer ".concat(localStorage.getItem("token"))
+        Authorization: "Bearer".concat(localStorage.getItem("token"))
       }
     })
       .then(function (response) {

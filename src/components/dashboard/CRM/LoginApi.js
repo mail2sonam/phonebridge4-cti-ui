@@ -8,6 +8,7 @@ var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
 
+
 //const LOGIN_API_BASE_URL = "http://192.168.10.210:9091";
 
 const LOGIN_API_BASE_URL = ipName
@@ -41,11 +42,11 @@ Axios.interceptors.response.use(
 class LoginApi {
 
     login(log) {
-        return Axios.post(ipName + '/' + 'user/login', log, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+        return Axios.post(ipName + '/' + 'user/login', log, );
     }
 
     logout(out) {
-        return Axios.post(ipName + '/' + 'user/logout', out, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+        return Axios.post(ipName + '/' + 'user/logout', out, );
     }
 };
 export default new LoginApi()

@@ -41,7 +41,6 @@ const CampaignList = (props) => {
       method: 'post',
       url: 'http://192.168.10.210:5001/eupraxia/file/upload',
       data: formData,
-      
       headers: { 'Content-Type': 'multipart/form-data' }
       // headers: { 'Content-Type': 'multipart/form-data', Authorization: "Bearer ".concat(localStorage.getItem("token")) }
     })

@@ -98,7 +98,10 @@ function DialerDispositionCard(props) {
             [evt.target.name]: value
         });
     }
-     // First Dispo
+
+
+
+    // First Dispo
     const [firstdispo, setFirstDispo] = useState({ firstval: '' });
     function dialerFirst(value) {
         console.log(value);
@@ -110,16 +113,16 @@ function DialerDispositionCard(props) {
     const [dialerFirstdispo, setDialerFirst] = useState([]);
     useEffect(() => {
         var data = {
-            campaignName: props.sakhidispo.camName,
+            campaign: props.sakhidispo.camName,
             client: "Orange"
         }
-      //  console.log(data)
+        console.log(data)
         DialerDispoApi.dispodialer(data)
             .subscribe(res => {
                 const maincat = res;
                 let tempList1 = [];
                 maincat.data.disposition.forEach(element => {
-                    tempList1.push(element.mainDispo);
+                    tempList1.push(element);
                 });
                 setDialerFirst(tempList1);
 
@@ -142,17 +145,17 @@ function DialerDispositionCard(props) {
     const [dialerdispo, setDialerDispo] = useState([]);
     useEffect(() => {
         var data = {
-            campaignName: props.sakhidispo.camName,
+            campaign: props.sakhidispo.camName,
             client: "Orange",
             mainDispo: firstdispo.firstval
         }
-        //console.log(data)
+        console.log(data)
         DialerDispoApi.dispodialerMain(data)
             .subscribe(res => {
                 const maincat = res;
                 let tempList1 = [];
                 maincat.data.disposition.forEach(element => {
-                    tempList1.push(element.dispoItem);
+                    tempList1.push(element);
                 });
                 setDialerDispo(tempList1);
 
@@ -172,18 +175,18 @@ function DialerDispositionCard(props) {
     const [dialersubdispo, setDialersubDispo] = useState([]);
     useEffect(() => {
         var data = {
-            campaignName: props.sakhidispo.camName,
+            campaign: props.sakhidispo.camName,
             client: "Orange",
-            mainDispo: firstdispo.firstval,
-            dispoItem: maindispo.mainval
+            dispo: maindispo.mainval,
+            mainDispo: firstdispo.firstval
         }
-        //console.log(data)
+        console.log(data)
         DialerDispoApi.subdispodialer(data)
             .subscribe(res => {
                 const maincat = res;
                 let tempList1 = [];
                 maincat.data.disposition.forEach(element => {
-                    tempList1.push(element.subDispoItem);
+                    tempList1.push(element);
                 });
                 setDialersubDispo(tempList1);
 
@@ -205,19 +208,19 @@ function DialerDispositionCard(props) {
     useEffect(() => {
 
         var data = {
-            campaignName: props.sakhidispo.camName,
+            campaign: props.sakhidispo.camName,
             client: "Orange",
+            dispo: maindispo.mainval,
             mainDispo: firstdispo.firstval,
-            dispoItem: maindispo.mainval,
-            subDispoItem: subdispo.submainval
+            subDispo: subdispo.submainval
         }
-       // console.log(data)
+        console.log(data)
         DialerDispoApi.dispoSubSubdialer(data)
             .subscribe(res => {
                 const maincat = res;
                 let tempList1 = [];
                 maincat.data.disposition.forEach(element => {
-                    tempList1.push(element.subsubDispoItem);
+                    tempList1.push(element);
                 });
                 setDialerSubSubDispo(tempList1);
 
@@ -258,14 +261,14 @@ function DialerDispositionCard(props) {
                                     >
 
                                         {
-                                            dialerFirstdispo.map((mainDispo, id) =>
-                                                <TreeNode value={mainDispo} key={id} title={mainDispo} >
+                                            dialerFirstdispo.map((element) =>
+                                                <TreeNode value={element.mainDispo} key={element.mainDispo} title={element.mainDispo} >
                                                 </TreeNode>)
 
                                         }
 
                                     </TreeSelect>
-                                </FormItem>
+                                 </FormItem>
                             </Col>
 
 
@@ -286,8 +289,8 @@ function DialerDispositionCard(props) {
                                     >
 
                                         {
-                                            dialerdispo.map((dispoItem, id) =>
-                                                <TreeNode value={dispoItem} key={id} title={dispoItem} >
+                                            dialerdispo.map((element) =>
+                                                <TreeNode value={element.dispo} key={element.dispo} title={element.dispo} >
                                                 </TreeNode>)
 
                                         }
@@ -312,8 +315,8 @@ function DialerDispositionCard(props) {
                                     >
 
                                         {
-                                            dialersubdispo.map((subDispoItem, id) =>
-                                                <TreeNode value={subDispoItem} key={id} title={subDispoItem} >
+                                            dialersubdispo.map((element) =>
+                                                <TreeNode value={element.subDispo} key={element.subDispo} title={element.subDispo} >
                                                 </TreeNode>)
 
                                         }
@@ -338,8 +341,8 @@ function DialerDispositionCard(props) {
                                     >
 
                                         {
-                                            dialerSubSubdispo.map((subsubDispoItem, id) =>
-                                                <TreeNode value={subsubDispoItem} key={id} title={subsubDispoItem} >
+                                            dialerSubSubdispo.map((element) =>
+                                                <TreeNode value={element.subSubDispo} key={element.subSubDispo} title={element.subSubDispo} >
                                                 </TreeNode>)
 
                                         }

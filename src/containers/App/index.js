@@ -71,9 +71,7 @@ import DialerMonitor from "../../components/dashboard/CRM/DialerMonitor";
 import DialerReport from "../../components/dashboard/CRM/DialerReport";
 import WarRoomReport from "../../components/dashboard/CRM/WarRoomReport";
 import DialerIncomingDispo from "../../components/dashboard/CRM/DialerIncomingDispo";
-import ClientDisposition from "../../components/dashboard/CRM/ClientDisposition";
-import DynamicDispoCard from "../../components/dashboard/CRM/DynamicDispoCard";
-import DynamicDisposition from "../../components/dashboard/CRM/DynamicDisposition";
+import  POCtest from "../../components/dashboard/CRM/POCtest";
 
 
 const RestrictedRoute = ({ component: Component, location, authUser, ...rest }) =>
@@ -215,7 +213,6 @@ const App = (props) => {
             <Route exact path='/signup' component={SignUp} />
             <ProctedRoute exact path='/agent' component={AgentPage} />
             <ProctedRoute exact path='/monitor' component={Monitor} />
-
             <Route exact path='/dashboard' component={Dashboard} />
             <ProctedRoute exact path='/admin' component={Admin} />
             <Route exact path='/useradd' component={UserAdd} />
@@ -258,9 +255,8 @@ const App = (props) => {
             <Route exact path='/dialerreport' component={DialerReport} />
             <Route exact path='/WarRoomReport' component={WarRoomReport} />
             <Route exact path='/dialerincom' component={DialerIncomingDispo} />
-            <Route exact path='/clientdisposition' component={ClientDisposition} />
-            {/*<Route exact path='/DynamicDispocard' component={DynamicDispoCard}/>*/}
-            <Route exact path='/DynamicDisposition' component={DynamicDisposition}/>
+            <Route exact path='/POCtest' component={POCtest} />
+            
             {/* <Route exact path='/editablecell' component={EditableTable}/> */}
             {/* <Route exact path='/mailDetail' component={MailDetail}/> */}
             <RestrictedRoute path={`${match.url}`} authUser={authUser} location={location}

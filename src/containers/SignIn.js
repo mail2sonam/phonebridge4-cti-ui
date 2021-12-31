@@ -52,7 +52,6 @@ const SignIn = (props) => {
 
     UserApi.login(data)
       .subscribe(response => {
-        //console.log(response.data.clientName)
         setLogin({
           id: response.data.model.id,
           username: response.data.model.username,
@@ -116,11 +115,10 @@ const SignIn = (props) => {
         localStorage.setItem("email", response.data.model.email)
         localStorage.setItem("extensiontype", response.data.model.extensiontype)
         localStorage.setItem("usertype", response.data.model.usertype)
-        localStorage.setItem("clientName", response.data.clientName)
 
         localStorage.setItem("dialerCampaign", "OGDefault");
       })
-     
+
   }
 
   const onFinishFailed = errorInfo => {

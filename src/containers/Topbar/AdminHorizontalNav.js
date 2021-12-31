@@ -120,14 +120,6 @@ const AdminHorizontalNav = () => {
             <IntlMessages id="sidebar.editors" />
           </Link>
         </Menu.Item>
-       {/*  <Menu.Item key="extra-components/editor/ck">
-          <Link to="/DailyCallReport">
-            <i className="icon icon-amchart" />
-
-            <IntlMessages id="sidebar.editors" />
-          </Link>
-       </Menu.Item>
-
 
 
          <Menu.Item key="extra-components/editor/ck">
@@ -136,7 +128,7 @@ const AdminHorizontalNav = () => {
 
             <IntlMessages id="WarRoomReport" />
           </Link>
-</Menu.Item>*/}
+        </Menu.Item>
 
         {/*<Menu.Item key="extra-components/color-picker">
           <Link to="/totalCallReport">

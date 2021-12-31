@@ -7,11 +7,12 @@ var ipHost = host.substring(0, charHost)
 var ipName  = "http://192.168.10.210:5001/eupraxia"
 
 
+
 //const Mapping_API_BASE_URL = "http://192.168.10.210:9091";
 
 const Mapping_API_BASE_URL = ipName
 
-{/*Axios.interceptors.response.use(
+Axios.interceptors.response.use(
    (response) => {
       return response;
    },
@@ -36,12 +37,11 @@ const Mapping_API_BASE_URL = ipName
       return Promise.reject(error);
    }
 );
-*/}
 
 class CampaigMappingApi {
 
    getUserFromMap(out) {
-      return Axios.post(ipName + '/' + 'campaign/getAllUsersInCampaign', out );
+      return Axios.post(ipName + '/' + 'campaign/getAllUsersInCampaign', out, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
    }
 
    saveMap(info) {
@@ -54,7 +54,7 @@ class CampaigMappingApi {
    }
 
    removeMap(count) {
-      return Axios.post(ipName + '/' + 'campaign/removemapping', count);
+      return Axios.post(ipName + '/' + 'campaign/removemapping', count, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
    }
 
    queueMap(map) {

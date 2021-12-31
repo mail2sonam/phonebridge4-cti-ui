@@ -282,7 +282,7 @@ const CallPopUpCard = (props) => {
           }
 
           <Col xl={15} lg={12} md={12} sm={12} xs={24}>
-            {props.callinfodetail.callStatus == "Connected" || props.callinfodetail.callStatus == "Dialing"  || props.callinfodetail.callStatus == "Hold" ||  props.callinfodetail.callStatus == "Hangup"
+            {props.callinfodetail.callStatus == "Connected" || props.callinfodetail.callStatus == "Dialing"
               ? <span>Phone Number: <label>{props.callinfodetail.phoneNo}</label></span>
               : <span>Phone Number: </span>
             }

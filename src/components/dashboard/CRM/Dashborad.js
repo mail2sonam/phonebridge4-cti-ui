@@ -67,11 +67,29 @@ const Dashboard = () => {
         setTotalCount({
           totalVal: res.data.totalCalls
         })
-          
+
         // datax =  res.data.data[0].statusCount
         // datay = res.data.data[1].statusCount
       });
 
+    MonitorApi.mailandSmsCount()
+      .subscribe(res => {
+        setMailAssignCount({
+          mailAssignVal: res.data.MailNotAssignedCount
+        })
+
+        setMailAssignButPen({
+          mailAssignPenVal: res.data.MailAssignedCount
+        })
+
+        setSmsAssignCount({
+          smsAssignVal: res.data.SmsNotAssignedCount
+        })
+
+        setSmsAssignButPen({
+          smsAssignPenVal: res.data.SmsAssignedCount
+        })
+      })
 
   });
   ivrAbdCount = ivrAbd.ivrAdbVal;

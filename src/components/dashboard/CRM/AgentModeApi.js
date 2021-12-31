@@ -8,6 +8,7 @@ var ipHost = host.substring(0, charHost)
 var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
+
 const AGENTMODE_API_BASED_URL = ipName
 
 //const AGENTMODE_API_BASED_URL = "http://192.168.10.210:9091";

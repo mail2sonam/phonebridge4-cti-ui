@@ -4,14 +4,15 @@ var host = window.document.location.host
 var charHost = host.indexOf(":");
 var ipHost = host.substring(0, charHost)
 //var ipName = window.document.location.protocol+"//"+ ipHost +":9091";
-var ipName = "http://192.168.10.210:5001/eupraxia"
+//var ipName = "http://192.168.10.210:5001/eupraxia"
 
-console.log("FutureSavings")
+var ipName = "http://192.168.10.210:5001/eupraxia"
+console.log("Orange")
 const MONITOR_API_BASE_URL = ipName
 
 //const MONITOR7000_API_BASE_URL = "http://192.168.10.210:9091";
 
-// Axios.interceptors.response.use
+// Axios.interceptors.response.use(
 //     (response) => {
 //         return response;
 //     },
@@ -39,31 +40,29 @@ const MONITOR_API_BASE_URL = ipName
 
 class MonitorApi {
 
-    callmonitor() {
-         return Axios.get(ipName + '/' + 'user/monitor', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-     }
+    // callmonitor() {
+    //     return Axios.get(ipName + '/' + 'user/monitor', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+    // }
 
-     triggercallmonitor2() {
-         return Axios.get(ipName + '/' + 'user/triggerDashboard', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-     }
+    // triggercallmonitor2() {
+    //     return Axios.get(ipName + '/' + 'user/triggerDashboard', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+    // }
 
-     callmonitor2() {
-         return Axios.get(ipName + '/' + 'user/monitor2', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-     }
+    // callmonitor2() {
+    //     return Axios.get(ipName + '/' + 'user/monitor2', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+    // }
 
-     liveDashboard(data) {
+    // liveDashboard() {
+    //     return Axios.get(ipName + '/' + 'report/todayCallsCdrReports', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+    // }
 
+    // mailandSmsCount() {
+    //     return Axios.get(ipName + '/' + 'mail/getTotalCountOfMailsAndSms', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+    // }
 
-         return Axios.get(ipName + '/' + 'report/todayCallsCdrReports', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-     }
-
-     mailandSmsCount() {
-         return Axios.get(ipName + '/' + 'mail/getTotalCountOfMailsAndSms', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-     }
-
-     dialerMonitor(camp) {
-         return Axios.post(ipName + '/' + 'file/diallerMonitor', camp, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-     }
+    // dialerMonitor(camp) {
+    //     return Axios.post(ipName + '/' + 'file/diallerMonitor', camp, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+    // }
 
     callmonitor() {
         return Axios.get(ipName + '/' + 'user/monitor');

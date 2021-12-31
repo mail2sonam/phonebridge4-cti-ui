@@ -8,11 +8,12 @@ var ipName =  "http://192.168.10.210:5001/eupraxia"
 
 
 
+
 //const FOLLOWUP_API_BASE_URL = "http://192.168.10.210:9091";
 
 const FOLLOWUP_API_BASE_URL = ipName
 
-{/*Axios.interceptors.response.use(
+Axios.interceptors.response.use(
     (response) => {
         return response;
     },
@@ -37,7 +38,7 @@ const FOLLOWUP_API_BASE_URL = ipName
         return Promise.reject(error);
     }
 );
-*/}
+
 class FollowUpApi {
 
     followup() {

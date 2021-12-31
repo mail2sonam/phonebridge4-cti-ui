@@ -65,10 +65,8 @@ const CallMonitor = () => {
         channel: localStorage.getItem("extn"), //"just admin extension",// For ex.3001
         spyType: "listen" //"listen"/"whisper"/"barge"
       }
-      console.log(data)
       BargingApi.spy(data)
         .subscribe(response => {
-          console.log(response.data)
         })
     }
 
@@ -168,13 +166,13 @@ const CallMonitor = () => {
                 <RadioGroup onChange={onChangeval}>
                   <Radio className="gx-text-green" onClick={() => clickforextn(res.data.model[i].extension)} value={"Wispring"}><strong>Whisper</strong></Radio>
                   <Radio className="gx-text-blue" onClick={() => clickforextn(res.data.model[i].extension)} value={"Listen"}><strong>Listen</strong></Radio>
-                  <Radio className="gx-text-red" onClick={() => clickforextn(res.data.model[i].extension)} value={"Barging"}><strong>Conference</strong></Radio>
+                  <Radio className="gx-text-red" onClick={() => clickforextn(res.data.model[i].extension)} value={"Barging"}><strong>Barging</strong></Radio>
                   <Radio value={"clear"}><strong>Clear</strong></Radio>
                 </RadioGroup>
 
-                {/*<Checkbox className="gx-text-green" onClick={() => clickforextn(res.data.model[i].extension)} onChange={onchangewispercheck}><strong>Whisper</strong></Checkbox>
+                {/* <Checkbox className="gx-text-green" onClick={() => clickforextn(res.data.model[i].extension)} onChange={onchangewispercheck}><strong>Whisper</strong></Checkbox>
                 <Checkbox className="gx-text-blue" onClick={() => clickforextn(res.data.model[i].extension)} onChange={onchangeListerncheck}><strong>Listen</strong></Checkbox>
-          <Checkbox className="gx-text-red" onClick={() => clickforextn(res.data.model[i].extension)} onChange={onchangebargcheck}><strong>Barging</strong></Checkbox> */}
+                <Checkbox className="gx-text-red" onClick={() => clickforextn(res.data.model[i].extension)} onChange={onchangebargcheck}><strong>Barging</strong></Checkbox> */}
 
               </div>
 
@@ -319,7 +317,7 @@ const CallMonitor = () => {
     },
     {
       title: 'Completed Calls',
-                                  dataIndex: 'completedCalls',
+      dataIndex: 'completedCalls',
       width: 250,
     },
     {

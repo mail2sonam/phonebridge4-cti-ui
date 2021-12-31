@@ -107,8 +107,7 @@ class WebSocketChat extends Component {
                             {this.displayMessages()}
                         </div>
 
-                        <SockJsClient url='"http://192.168.10.210:5001/eupraxia"
-"
+                        <SockJsClient url='"http://192.168.10.210:5001/eupraxia""
 "/websocket-chat/'
                             topics={['/topic/user']}
                             onConnect={() => {

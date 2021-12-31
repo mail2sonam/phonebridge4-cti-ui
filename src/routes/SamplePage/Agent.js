@@ -23,10 +23,7 @@ import SmsDispoSakhi from "../../components/dashboard/CRM/SmsDispoSakhi";
 import WebSocketChat from "../../components/dashboard/CRM/WebSocketChat";
 import DialerDispositionCard from "../../components/dashboard/CRM/DialerDispositionCard";
 import DialerIncomingDispo from "../../components/dashboard/CRM/DialerIncomingDispo";
-import DynamicDispoCard from "../../components/dashboard/CRM/DynamicDispoCard";
-import ClientDisposition from "../../components/dashboard/CRM/ClientDisposition";
-import DynamicDisposition from "../../components/dashboard/CRM/DynamicDisposition";
-import DispositionDetails from "../../components/dashboard/CRM/DispositionDetails";
+
 // import SignIn from "../../containers/SignIn";
 
 
@@ -78,7 +75,7 @@ const AgentPage = () => {
           camName: response.data.result.camName
 
         });
-localStorage.setItem("dipophno",response.data.result.phoneNo)
+
       })
     //Callinfo details
 
@@ -242,13 +239,17 @@ localStorage.setItem("dipophno",response.data.result.phoneNo)
                 <Widget styleName={`ant-col gx-bg-geekblue `}>
                   <div className="gx-card-body">
                     {flageincom == 0  // 0 means hide ,  1 means show dispo
-                      
-                      ? <DispositionCard sakhidispo={info} />
+                      // ? <DispoSakhi sakhidispo={info} /> // Amtex Dispositions
+                      ? <DialerDispositionCard sakhidispo={info} />
+
                       : flageincom == 1
-                      ? <DispositionCard sakhidispo={info} />
+                      ? <DialerIncomingDispo sakhiImcomdispo={info} />
 
                      : <div className="gx-text-white" > Waiting for Another Call.... </div>
-                   }
+
+                    // : <DialerIncomingDispo sakhiImcomdispo={info} />
+
+                    }
                   </div>
                 </Widget>
               </Col>
@@ -265,9 +266,9 @@ localStorage.setItem("dipophno",response.data.result.phoneNo)
 
               <Col xl={24} lg={12} md={12} sm={12} xs={24}>
                 <Widget styleName={`ant-col gx-bg-geekblue `}>
-                <div className="gx-card-body">
-                 <DispositionDetails dispodetail={info} />
-                   </div>
+                  <div className="gx-card-body">
+                    <SakhiDispoDetails dispodetail={info} />
+                  </div>
                 </Widget>
               </Col>
 

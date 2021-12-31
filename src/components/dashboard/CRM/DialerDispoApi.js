@@ -8,6 +8,7 @@ var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
 
+
 //const DIALER_API_BASE_URL = "http://192.168.10.210:9091";
 
 const DIALER_API_BASE_URL = ipName
@@ -40,12 +41,8 @@ Axios.interceptors.response.use(
 
 class DialerDispoApi {
 
-    findclient(client) {
-       return Axios.post(ipName + '/' + 'yml/findByClient', client, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-    }
-
     dispodialer(first) {
-        return Axios.post(ipName + '/' + 'yml/findByCampaignName', first, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+        return Axios.post(ipName + '/' + 'yml/findByCampaign', first, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
     }
 
     dispodialerMain(main) {

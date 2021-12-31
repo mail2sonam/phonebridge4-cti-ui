@@ -8,6 +8,7 @@ var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
 
+
 //const REPORT_API_BASE_URL = "http://192.168.10.210:9091";
 
 const REPORT_API_BASE_URL = ipName
@@ -53,17 +54,13 @@ class ReportApi {
     // }
 
     dailyWiseReport(daily) {
-        return Axios.post(ipName + '/report/ShowReportsByDate', daily, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
+        return Axios.post(ipName + '/report/ShowReportsByDate', daily );
     }
   //  warRoomReport(startDate, endDate) {
        
     //    return Axios.get(ipName + '/report/getWarRoomReport?startDate='+startDate+'&endDate='+endDate, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
    // }
 
-  //clientReport(startDate, endDate) {
-       
-      //return Axios.get(ipName + '/report/getYamlDispoReport?startDate='+dateofstart+'&endDate='+dateofend, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
-   // }
 
 };
 export default new ReportApi()

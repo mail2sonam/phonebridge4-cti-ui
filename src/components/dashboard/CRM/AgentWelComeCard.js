@@ -79,22 +79,7 @@ function AgentWelComeCard(props) {
   localStorage.setItem("break", props.agentDialer.popupStatus)
 
   function onChangeCampSelect(value) {
-         
-    
-    console.log(value)
-    if(value == undefined)
-    {
-      console.log("stop dialer")
-      var data3 = {
-        extension: localStorage.getItem("extn"),
-      }
-      console.log(data3)
-      DialerApi.stopDialer(data3)
-        .subscribe(res => {
-          console.log(res)
-        })
-    }
-    else{
+
 
 
     var data1 = {
@@ -111,7 +96,7 @@ function AgentWelComeCard(props) {
         console.log(res.data)
       })
 
-    }
+
     var data2 = {
       extension: localStorage.getItem("extn"),
     }

@@ -8,6 +8,7 @@ var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
 
+
 //const Mail_API_BASE_URL = "http://192.168.10.210:9091";
 const Mail_API_BASE_URL = ipName
 

@@ -14,7 +14,7 @@ const TreeNode = TreeSelect.TreeNode;
 function CampaignMapping(){
    let [inCamplist, setInCampList] = useState([]);
    let [inUserlist, setInUserList] = useState([]);
-   let [campainglist, setCampaignList] = useState([]);
+   let [campaignlist, setCampaignList] = useState([]);
 
   
 //campaign list
@@ -78,7 +78,7 @@ const [incamval, setInCampVal] =useState({val:''})
           setInUserVal({
             val: value,
           })
- }
+        }
   //In User side list 
 
 
@@ -94,9 +94,6 @@ const [incamval, setInCampVal] =useState({val:''})
         setaddedVal({
           username: res.data.model.username,
         })
-        if(res.data.responseCode == 200){
-          alert("Users Added in Campaign");
-        }
       });
   }
 
@@ -105,16 +102,13 @@ const [incamval, setInCampVal] =useState({val:''})
   function Removecamp(){
     var data={
       campaignname: campval.val,
-      username: inuserval.val,
+      username: incamval.val,
     }
       CampaignMappingApi.removeMap(data)
       .subscribe(res=>{
         setremoveVal({
           username: res.data.model.username,
         })
-        if(res.data.responseCode == 200){
-          alert("Users Removed from Campaign");
-        }
       });
     
   }
@@ -138,7 +132,7 @@ const [incamval, setInCampVal] =useState({val:''})
                           onChange={onchangeCampList}    
                 >
             {
-              campainglist.map((campaignName,campaignId) => 
+              campaignlist.map((campaignName,campaignId) => 
               <TreeNode   value ={campaignName}key={campaignId} title={campaignName} > 
               </TreeNode>)
              }

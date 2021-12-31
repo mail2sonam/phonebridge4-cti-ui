@@ -7,6 +7,7 @@ var ipHost = host.substring(0, charHost)
 var ipName = "http://192.168.10.210:5001/eupraxia"
 
 
+
 //const DISPOSITION_API_BASE_URL = "http://192.168.10.210:9091";
 const DISPOSITION_API_BASE_URL = ipName
 
@@ -37,14 +38,6 @@ Axios.interceptors.response.use(
 );
 
 class DispositionApi {
-
-
-    
-    //save normal dispo
-    saveNormalDispo(normal) {
-        return Axios.post(ipName + '/' + 'report/callHistoryByPhoneNo', normal);
-    }
-    //save normal dispo
 
     // Dispo() {
     //     return Axios.get(ipName + '/api/showAllDisposition', { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
@@ -155,6 +148,4 @@ class DispositionApi {
         return Axios.post(ipName + '/' + 'report/saveWarRoom', war, { headers: { Authorization: "Bearer ".concat(localStorage.getItem("token")) } });
     }
 };
-
-
 export default new DispositionApi()
